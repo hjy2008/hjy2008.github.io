@@ -1,0 +1,515 @@
+
+
+
+
+
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #e3e3e3;
+}
+
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color: #e3e3e3;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+    color: #e3e3e3;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: #e3e3e3;
+}
+
+/* Custom Styles */
+
+#map {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    display: block;
+}
+
+/* 透明参考
+ public static final float HTalpha_Primary = 0.87f;
+ public static final float HTalpha_Secondary = 0.54f;
+ public static final float HTalpha_Hint = 0.38f;
+ public static final float HTalpha_Weak_m = 0.28f;
+ public static final float HTalpha_Weak = 0.18f;
+    */
+
+/* █████████████████████ 全局 基本字体 */
+
+body {
+    /*height: 100%;*/
+    font-size: 14px;
+    color:#212121 ;
+    background-color: #F5F5F6;
+}
+html,
+body,
+button,
+input,
+select,
+textarea {
+    color: #3e4548;
+    font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+    font-size: 100%;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+
+
+
+pre {
+    color:#212121 ;
+}
+
+/* █████████████████████ 连接 */
+
+
+
+a {
+
+    color: black;
+
+}
+
+a:hover {
+
+}
+
+text {
+    color: red;
+}
+
+/* █████████████████████ 书籍详情 home_book_detail.blade.php */
+.dropdown-menu{
+
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+}
+
+/*圆角 书籍整体页面左右两边使用*/
+.panel-radius {
+
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* bookDetail*/
+
+.bookDetailTitle {
+    color:#212121 ;
+    font-size: 40px;
+    opacity: 0.87;
+}
+
+.bookDetailBrief {
+    /**/
+    color:#212121 ;
+    opacity: 0.54;
+    font-size: 18px;
+    border: none;
+    background-color: transparent;
+
+}
+
+/* article */
+.articleTitle {
+    color:#212121 ;
+    opacity: 0.87;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+padding-left: 10px;
+}
+
+.articleBrief {
+    color:#212121 ;
+    opacity: 0.28;
+    font-size: 18px;
+    border: none;
+    background-color: transparent;
+
+}
+
+.articleInfo{
+    font-size: 13px;
+    color: #212121;
+    opacity: 0.28;
+    padding-left: 11px;
+    line-height: 2px;
+}
+
+/* role */
+
+.roleTag {
+
+    color: #3e3e3e;
+    height: 40px;
+    line-height: 20px;
+    padding: 10px 15px 10px 15px;
+    display: block;
+    background-color: #f6f6f6;
+    margin: 10px 0px 10px 10px;
+    border-radius: 10px;
+    font-size: 16px;
+
+}
+
+.roleTypeTitle {
+    color:#212121 ;
+    opacity: 0.87;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.deleteBtn {
+    display: none;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    font-size: 20px;
+    background-color: yellow
+}
+
+.center-vertical {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.tip {
+    padding-top: 10px;
+    color: #bfbfbf;
+}
+
+.inputTitle {
+    width: 100%; /*自动适应父布局宽度*/
+    overflow: auto;
+    word-break: break-all;
+    font-size: 30px;
+    padding: 0px 10px 0px 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+.inputTextarea {
+    width: 100%; /*自动适应父布局宽度*/
+    overflow: hidden;
+
+    min-width: 100%;
+    max-width: 100%;
+
+    word-break: break-all;
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 20px 10px 20px 10px;
+    letter-spacing: 2px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    border-radius: 10px;
+
+}
+
+/* █████████████████████ 编辑页面 home_edit_model.blade.php  ---------------------*/
+
+
+
+
+
+/* █████████████████████ -----------------  分享页面CSS  ---------------------*/
+
+/*   分享文章页      */
+
+.shareArticle_bodyText {
+    overflow: auto;
+    word-break: break-all;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 2px;
+
+    border: none;
+    padding: 0px;
+    white-space: pre-wrap; /*css-3*/
+    white-space: -moz-pre-wrap; /*Mozilla,since1999*/
+    white-space: -pre-wrap; /*Opera4-6*/
+    white-space: -o-pre-wrap; /*Opera7*/
+    word-wrap: break-word; /*InternetExplorer5.5+*/
+
+}
+
+.share_TextSecondary {
+    color: #bebebf;
+    font-size: 14px;
+}
+
+.share_bodyBG {
+    background-color: #f5f5f6;
+}
+
+.share_bottom {
+    padding: 10px;
+    background-color: #5b5b5b;
+    font-size: 14px;
+    color: #bebebf;
+    line-height: 20px;
+    overflow: hidden;
+}
+
+.share_bottom a {
+    color: #bebebf;
+}
+
+.share_bottom a:hover {
+    color: #bebebf;
+}
+
+/*   分享书本阅读页      */
+
+.pageBtnDiv {
+    text-align: center;
+}
+
+.pageBtnDiv a {
+    text-decoration: none
+}
+
+/*   分享书本目录页      */
+
+.booklistDiv {
+    cursor: pointer;
+    margin: 0px;
+    padding: 5px 0px 0px 0px;
+}
+
+.booklistTitle {
+    font-size: 17px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.divAsLine {
+    height: 1px;
+    background-color: #e8e8e8;
+    margin: 5px 20px 0px 20px;
+    padding: 0px;
+
+}
+
+/*内容的左右间隙*/
+.shareContentPaddingLR {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.shareContentPaddingTop {
+    padding-top: 20px;
+
+}
+
+.shareContentPaddingBottom {
+    padding-bottom: 100px;
+}
+
+
+/* --------------- 分享设定页 -------------- */
+
+ul.share_role_tree,
+
+/*简介*/
+ul.share_role_tree pre{
+
+    border: none;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    padding:  5px 0px 5px 0px;
+    margin: 0px;
+    font-size: 14px;
+    color: #9b9b9b;
+
+}
+/*标题*/
+ul.share_role_tree ul {
+
+    list-style-type:none;
+    color:#212121 ;
+    margin: 0;
+    padding-left: 25px;
+    font-size: 16px;
+    display: block;
+}
+
+ul.share_role_tree li {
+
+    color:#212121 ;
+    font-size: 18px;/
+    list-style: none;
+    position: relative;
+}
+
+ul.share_role_tree>li:first-child:before {
+    border-style: none none solid none;
+}
+
+/*直角线*/
+ul.share_role_tree li:before {
+    position: absolute;
+    content: '';
+    top: 0.20em;
+    left: -0.85em;
+    width: 0.5em;
+    /*竖线高度*/
+    height: 0.9em;
+    border-style: none none solid solid;
+    border-width: 0.05em;
+    border-color: #cecece;
+}
+
+/*竖线*/
+ul.share_role_tree li:not(:last-child):after {
+    position: absolute;
+    content: '';
+    top: 0.7em;
+    left: -0.85em;
+    bottom: -0.5em;
+    border-style: none none none solid;
+    border-width: 0.05em;
+    border-color: #cecece;
+
+}
+
+
+
+/*点击图标的样式*/
+ul.share_role_tree a{
+    padding-left: 20px;
+    text-decoration:none;
+    background: url("../images/ic_node_default.png") left no-repeat  ;
+    background-size:  20px;
+
+}
+
+ul.share_role_tree a:focus{
+    color: #ff4344;
+}
+/*书籍简介*/
+.share_role_book_brief{
+    color: #9b9b9b;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+}
+
+/*显示brief按钮*/
+
+.share_role_toggle_brief_btn{
+
+    width: 40px;
+    color: #cecece;
+    float: right;
+    text-align: right;
+    padding-top: 0px;
+    margin-top: 0px;
+    font-size: 16px;
+    display: block;
+    cursor: pointer;
+    /*background-color: #ebebeb;*/
+}
+
+
+/*显示图片按钮*/
+.share_role_img_btn{
+
+    color: #9b9b9b;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+.share_role_div{
+    position: absolute;
+    content: '';
+    top: 0.7em;
+    left: -0.7em;
+    bottom: -1.0em;
+    border-style: none none none solid;
+    border-width: 0.05em;
+    border-color: #aaa;
+}
+
+
+/*全屏显示*/
+.share_role_fullScreen {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 111;
+    transition: all .3s;
+}
+.share_role_fullScreen div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.share_role_fullScreen div img {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+
+/*------------------------ 历史页面 ------------------------*/
+
+.history_list {
+    color: #212121;
+    font-size: 20px;
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+    opacity: 0.87;
+    border-radius: 10px
+}
+
+.history_list p{
+    padding: 0px;
+    margin: 0px;
+    font-size: 14px;
+    color: #212121;
+    opacity: 0.32;
+}
+.history_list pre{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    background: transparent;
+}
+
+/*大圆圈,返回按钮*/
+.backBtn{
+    font-size: 21px;color:#212121;opacity: 0.87;
+    text-decoration: none
+
+}
+.backBtnText{
+    padding-left: 5px;
+    font-size: 28px;color:#212121;opacity: 0.87;
+    text-decoration: none
+}
