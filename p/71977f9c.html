@@ -1,0 +1,340 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>PyCharm 安装、激活破解与 Anaconda 环境配置 | 爱编程的小伙子</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="/img/pwa/favicon.png"><!-- index.css--><link rel="stylesheet" href="/css/index.css?v=3.0.11"><!-- inject head--><link rel="canonical" href="http://hjy2008.github.io/p/71977f9c.html"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"><!-- aplayer--><!-- swiper--><!-- fancybox ui--><!-- katex--><!-- Open Graph--><meta name="description" content="前言 为了保证安装顺利，请卸载之前的PyCharm版本，避免部分离奇问题，相关设置请进行备份！ 一. 软件下载Pycharm官网：代码编辑器Anaconda官网：Python 环境 二者均为官网链接注意：PyCharm 激活与版本无关，均可以激活 二. 软件安装1. PyCharm 安装 双击运"><!-- pwa--><meta name="apple-mobile-web-app-capable" content="爱编程的小伙子"><meta name="theme-color" content="var(--efu-main)"><meta name="apple-mobile-web-app-status-bar-style" content="var(--efu-main)"><link rel="bookmark" href="/img/pwa/favicon.png"><link rel="apple-touch-icon" href="/img/pwa/favicon.png" sizes="180x180"><script>console.log(' %c Solitude %c ' + '3.0.11' + ' %c https://github.com/everfu/hexo-theme-solitude',
+    'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
+    'background:#ff9a9a ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff',
+    'background:unset ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff')
+</script><script>(()=>{
+        const saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        };
+        window.utils = {
+            saveToLocal: saveToLocal,
+            getCSS: (url, id = false) => new Promise((resolve, reject) => {
+              const link = document.createElement('link')
+              link.rel = 'stylesheet'
+              link.href = url
+              if (id) link.id = id
+              link.onerror = reject
+              link.onload = link.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                link.onload = link.onreadystatechange = null
+                resolve()
+              }
+              document.head.appendChild(link)
+            }),
+            getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+              const script = document.createElement('script')
+              script.src = url
+              script.async = true
+              script.onerror = reject
+              script.onload = script.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+              }
+
+              Object.keys(attr).forEach(key => {
+                script.setAttribute(key, attr[key])
+              })
+
+              document.head.appendChild(script)
+            }),
+            addGlobalFn: (key, fn, name = false, parent = window) => {
+                const globalFn = parent.globalFn || {}
+                const keyObj = globalFn[key] || {}
+
+                if (name && keyObj[name]) return
+
+                name = name || Object.keys(keyObj).length
+                keyObj[name] = fn
+                globalFn[key] = keyObj
+                parent.globalFn = globalFn
+            },
+            addEventListenerPjax: (ele, event, fn, option = false) => {
+              ele.addEventListener(event, fn, option)
+              utils.addGlobalFn('pjax', () => {
+                  ele.removeEventListener(event, fn, option)
+              })
+          },
+        }
+    })()</script><!-- theme--><script>initTheme = () => {
+    let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const cachedMode = utils.saveToLocal.get('theme');
+    if (cachedMode === undefined) {
+        const nowMode =
+            isDarkMode ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', nowMode);
+    } else {
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    }
+    typeof rm === 'object' && rm.mode(cachedMode === 'dark' && isDarkMode)
+}
+initTheme()</script><!-- global head--><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: undefined,
+    localsearch: undefined,
+    runtime: '2023-04-20 00:00:00',
+    lazyload: {
+        enable: false,
+        error: '/img/error_load.avif'
+    },
+    copyright: {"limit":0,"author":"作者: hanjingyun","link":"链接: ","source":"来源: 爱编程的小伙子","info":"著作权归作者所有。 商业转载请联系作者获得授权，非商业转载请注明出处。"},
+    highlight: {"limit":200,"expand":true,"copy":true,"syntax":"highlight.js"},
+    randomlink: false,
+    lang: {"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"day":"天前","hour":"小时前","just":"刚刚","min":"分钟前","month":"个月前"},"day":" 天","f12":"开发者模式已打开，请遵循GPL协议。","totalk":"无需删除空行，直接输入评论即可"},
+    aside: {
+        state: {
+            morning: "✨ 早上好，新的一天开始了",
+            noon: "🍲 午餐时间",
+            afternoon: "🌞 下午好",
+            night: "早点休息",
+            goodnight: "晚安 😴",
+        },
+        witty_words: ["你可以的","你一定可以的","祝你好运，陌生人"],
+        witty_comment: {
+            prefix: '好久不见，',
+            back: '欢迎再次回来，',
+        },
+    },
+    covercolor: {
+        enable: false
+    },
+    comment: false,
+    lightbox: 'mediumZoom',
+    right_menu: false,
+    translate: {"translateDelay":0,"defaultEncoding":2},
+    lure: {"jump":"w(ﾟДﾟ)w 别走！！！","back":"o(*￣▽￣*)ブ欢迎回来！"},
+    expire: false,
+};</script><!-- page-config head--><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: '',
+    toc: true,
+    comment: false,
+    ai_text: false,
+    color: false,
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body id="body"><!-- universe--><canvas id="universe"></canvas><!-- background img--><!-- loading--><!-- console--><!-- sidebar--><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a></div></div></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><span class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()"><i class="solitude fas fa-circle-half-stroke"></i><span>显示模式</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  fas fa-folder-closed"></i><span>全部文章</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>关于</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/tools"><i class="solitude  fas fa-laptop"></i><span>我的工具</span></a></li><li><a class="site-page child" href="/tlink/"><i class="solitude  fas fa-toolbox"></i><span>在线工具</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="card-tag-cloud"><a href="/tags/%E5%B7%A5%E5%85%B7/">工具<sup>2</sup></a><a href="/tags/PyCharm/">PyCharm<sup>1</sup></a><a href="/tags/%E6%BF%80%E6%B4%BB/">激活<sup>2</sup></a><a href="/tags/%E7%A0%B4%E8%A7%A3/">破解<sup>2</sup></a><a href="/tags/%E5%B7%B2%E6%88%90%E5%8A%9F/">已成功<sup>2</sup></a><a href="/tags/%E4%B8%80%E6%AD%A5%E4%B8%80%E5%9B%BE/">一步一图<sup>2</sup></a><a href="/tags/Typora/">Typora<sup>1</sup></a></div></div><span class="sidebar-menu-item-title">网站信息</span><div class="webinfo"><div class="webinfo-item"><div class="item-name">全站字数 :</div><div class="item-count">1.2k</div></div></div></div></div><!-- keyboard--><!-- righhtside--><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><a id="site-name" href="/" title="返回博客主页"><span class="title">运.</span><i class="solitude fas fa-home"></i></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">PyCharm 安装、激活破解与 Anaconda 环境配置</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  fas fa-folder-closed"></i><span>全部文章</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>关于</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/tools"><i class="solitude  fas fa-laptop"></i><span>我的工具</span></a></li><li><a class="site-page child" href="/tlink/"><i class="solitude  fas fa-toolbox"></i><span>在线工具</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="travellings_button"><a class="site-page" target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_46598546" title=""><i class="solitude fas fa-train"></i></a></div><div class="nav-button" id="nav-totop" onclick="sco.toTop()"><a class="totopbtn"><i class="solitude fas fa-arrow-up"></i><span id="percent">0</span></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude fas fa-bars"></i></a></div></div></div></nav><div class="coverdiv" id="coverdiv"><img class="nolazyload" id="post-cover" src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/logo.png" alt="PyCharm 安装、激活破解与 Anaconda 环境配置"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="该文章为原创文章，注意版权协议">原创</a><span class="post-meta-categories"><a class="post-meta-categories" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></span><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%B7%A5%E5%85%B7/"><span class="tags-name tags-punctuation"><i class="solitude fas fa-hashtag"></i>工具</span></a><a class="post-meta__tags" href="/tags/PyCharm/"><span class="tags-name tags-punctuation"><i class="solitude fas fa-hashtag"></i>PyCharm</span></a><a class="post-meta__tags" href="/tags/%E6%BF%80%E6%B4%BB/"><span class="tags-name tags-punctuation"><i class="solitude fas fa-hashtag"></i>激活</span></a><a class="post-meta__tags" href="/tags/%E7%A0%B4%E8%A7%A3/"><span class="tags-name tags-punctuation"><i class="solitude fas fa-hashtag"></i>破解</span></a><a class="post-meta__tags" href="/tags/%E5%B7%B2%E6%88%90%E5%8A%9F/"><span class="tags-name tags-punctuation"><i class="solitude fas fa-hashtag"></i>已成功</span></a><a class="post-meta__tags" href="/tags/%E4%B8%80%E6%AD%A5%E4%B8%80%E5%9B%BE/"><span class="tags-name tags-punctuation"><i class="solitude fas fa-hashtag"></i>一步一图</span></a></div></div></div></div><h1 class="post-title">PyCharm 安装、激活破解与 Anaconda 环境配置</h1><div id="post-meta"><div class="meta-secondline"><span class="post-meta-wordcount"><span class="post-meta-separator"></span></span></div></div></div><div id="post-info-bottom"></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content article-container"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p> 为了保证安装顺利，请卸载之前的PyCharm版本，避免部分离奇问题，相关设置请进行备份！</p>
+<h1 id="一-软件下载"><a href="#一-软件下载" class="headerlink" title="一. 软件下载"></a>一. 软件下载</h1><p><a target="_blank" rel="noopener" href="https://www.jetbrains.com/pycharm/download/">Pycharm官网</a>：代码编辑器<br><a target="_blank" rel="noopener" href="https://www.anaconda.com/download">Anaconda官网</a>：Python 环境</p>
+<blockquote>
+<p>二者均为官网链接<br>注意：PyCharm 激活与版本无关，均可以激活</p>
+</blockquote>
+<h1 id="二-软件安装"><a href="#二-软件安装" class="headerlink" title="二. 软件安装"></a>二. 软件安装</h1><h2 id="1-PyCharm-安装"><a href="#1-PyCharm-安装" class="headerlink" title="1. PyCharm 安装"></a>1. PyCharm 安装</h2><blockquote>
+<p>双击运行，记得给管理员权限</p>
+</blockquote>
+<p><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/1.png" alt="点击下一步"></p>
+<blockquote>
+<p>自行选择安装目录。注意：<strong>目录里面不能有中文</strong></p>
+</blockquote>
+<p><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/2.png" alt="选择目录"></p>
+<blockquote>
+<p>根据自己需求，选择安装选项</p>
+</blockquote>
+<p><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/3.png" alt="点击下一步"></p>
+<blockquote>
+<p>默认即可，点击安装</p>
+</blockquote>
+<p><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/4.png" alt="点击安装"></p>
+<blockquote>
+<p>不运行，点击完成即可</p>
+</blockquote>
+<p><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/5.png" alt="点击完成"></p>
+<h2 id="2-Anaconda-安装"><a href="#2-Anaconda-安装" class="headerlink" title="2. Anaconda 安装"></a>2. Anaconda 安装</h2><blockquote>
+<p>双击运行，可给管理员权限，点击 Next<br><em>区别：仅安装当前用户不用管理员权限</em></p>
+</blockquote>
+<p><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/6.png" alt="点击 Next"></p>
+<blockquote>
+<p>这里是许可同意声明，点击 <strong>I Agree</strong> 即可</p>
+</blockquote>
+<p><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/7.png" alt="点击 I Agree"></p>
+<blockquote>
+<p>根据自行需要，可以选择：仅为当前用户（Just Me）或者 所有用户（All Users）<br>选择所有用户时，会申请管理员权限<br>之后点击 <strong>Next</strong></p>
+</blockquote>
+<p><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/8.png" alt="点击 Next"></p>
+<blockquote>
+<p>自行选择安装目录，注意：路径不能有中文，点击 <strong>Next</strong></p>
+</blockquote>
+<p><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/9.png" alt="自行选择安装目录"></p>
+<blockquote>
+<p>这里建议勾选最后一下，作用是：清除之前的 Anaconda 缓存，有助于减少意外发生</p>
+</blockquote>
+<p><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/10.png" alt="选择清除缓存，并安装"></p>
+<blockquote>
+<p>这里是翻译<br><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/11.png" alt="这里是翻译"></p>
+</blockquote>
+<blockquote>
+<p>点击 <strong>Next</strong>（上一步忘截图了😓）</p>
+</blockquote>
+<p><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/12.png" alt="点击 Next"></p>
+<blockquote>
+<p>可以取消，点击 <strong>Finish</strong></p>
+</blockquote>
+<p><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/13.png" alt="点击 Finish"></p>
+<blockquote>
+<p>这里是翻译<br><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/14.png" alt="翻译"></p>
+</blockquote>
+<h2 id="3-Anaconda-环境配置-这里是重点！！Python-能不能正常用取决于这里"><a href="#3-Anaconda-环境配置-这里是重点！！Python-能不能正常用取决于这里" class="headerlink" title="3. Anaconda 环境配置 [这里是重点！！Python 能不能正常用取决于这里]"></a>3. Anaconda 环境配置 [这里是重点！！Python 能不能正常用取决于这里]</h2><h3 id="1-找到环境变量"><a href="#1-找到环境变量" class="headerlink" title="1. 找到环境变量"></a>1. 找到环境变量</h3><p>win11 可以直接搜索<br><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/15.png" alt="环境变量"><br>win10：</p>
+<ol>
+<li>打开控制面板，选择小图标<br><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/16.png" alt="控制面板"></li>
+<li>选择 <strong>系统</strong> &gt; <strong>高级系统设置</strong><br><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/17.png" alt="系统"></li>
+</ol>
+<h3 id="2-添加环境变量"><a href="#2-添加环境变量" class="headerlink" title="2. 添加环境变量"></a>2. 添加环境变量</h3><p>接下来，win11 与 win10 一致</p>
+<ol>
+<li><p>选择 <strong>高级</strong> &gt; <strong>环境变量</strong><br><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/18.png" alt="环境变量"></p>
+</li>
+<li><p>在 <strong>系统变量</strong> 里面选择 <strong>Path</strong> 并双击打开<br><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/19.png" alt="找到 Path"></p>
+</li>
+<li><p>点击 <strong>新建</strong><br><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/20.png" alt="新建"></p>
+</li>
+<li><p>在新的位置输入 <strong>Anaconda的安装路径</strong> 如下图：<br><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/21.png" alt="输入 Anaconda 路径"></p>
+</li>
+<li><p>再次添加路径：<strong>Anaconda路径\Scripts\</strong><br><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/22.png" alt="Scripts"></p>
+<blockquote>
+<p>该路径是 Python 相关包的位置，例如：pip等，不添加会导致无法使用 pip<br>同时，可以将两个路径<strong>上移</strong>，为了避免与其他版本的Python冲突</p>
+</blockquote>
+</li>
+<li><p>依次确认保存<br><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/23.png" alt="确认"></p>
+</li>
+</ol>
+<h3 id="3-校验是否成功"><a href="#3-校验是否成功" class="headerlink" title="3. 校验是否成功"></a>3. 校验是否成功</h3><ol>
+<li><kbd>Win</kbd> + <kbd>R</kbd>调出 运行，输入：<strong>cmd</strong>，点击确定<br><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/24.png" alt="cmd运行"></li>
+<li>分别输入 <strong>python</strong> 和 <strong>pip</strong> 当均有正常输出时（如下图），则 Anaconda安装正确🎉<br><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/25.png" alt="校验"></li>
+</ol>
+<h3 id="4-拓展优化"><a href="#4-拓展优化" class="headerlink" title="4. 拓展优化"></a>4. 拓展优化</h3><ol>
+<li>pip更新</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install pip --upgrade</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>pip换源<br>由于 pip 的默认源可能有点慢，建议换 <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/help/pypi/">清华源</a></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip config <span class="built_in">set</span> global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple</span><br></pre></td></tr></table></figure>
+<h1 id="三-PyCharm-激活"><a href="#三-PyCharm-激活" class="headerlink" title="三. PyCharm 激活"></a>三. PyCharm 激活</h1><h2 id="1-下载激活包"><a href="#1-下载激活包" class="headerlink" title="1. 下载激活包"></a>1. 下载激活包</h2><p><a href="/files/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/%E6%BF%80%E6%B4%BB.zip">压缩包</a>里面有 2 个文件，如下图<br><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/26.png" alt="文件"></p>
+<h2 id="2-激活"><a href="#2-激活" class="headerlink" title="2. 激活"></a>2. 激活</h2><ol>
+<li>将 <strong>Jetbra</strong> 文件夹放到 <strong>PyCharm安装目录的根目录下</strong>，如下图。<br><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/27.png" alt="放置"></li>
+<li>运行 <strong>jetbra\scripts\install-all-users.vbs</strong>脚本。注意：会请求管理员权限，请授予<br>点击 <strong>确定</strong><br><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/28.png" alt="确定"><br>出现该界面，则代表成功，点击确定即可<br><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/29.png" alt="在这里插入图片描述"></li>
+<li>复制 <strong>key.txt</strong> 里面的激活码，启动 <strong>PyCharm</strong>，进入激活界面<br>选择第二个激活码激活<br><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/30.png" alt="激活"><br>粘贴激活码，点击 <strong>Activate</strong> 进行激活<br><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/31.png" alt="激活"></li>
+</ol>
+<h2 id="3-激活成功"><a href="#3-激活成功" class="headerlink" title="3. 激活成功"></a>3. 激活成功</h2><p><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/32.png" alt="激活成功"></p>
+<h1 id="四-PyCharm-相关配置"><a href="#四-PyCharm-相关配置" class="headerlink" title="四. PyCharm 相关配置"></a>四. PyCharm 相关配置</h1><h2 id="1-可以选择-新建项目-或-打开已有项目文件夹"><a href="#1-可以选择-新建项目-或-打开已有项目文件夹" class="headerlink" title="1. 可以选择 新建项目 或 打开已有项目文件夹"></a>1. 可以选择 新建项目 或 打开已有项目文件夹</h2><p><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/33.png" alt="新建"><br>打开新文件夹时，请勾选二者，点击 <strong>Trust ‘’ Folder</strong>，会请求管理员，请授予<br><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/34.png" alt="信任"></p>
+<blockquote>
+<p>翻译如下<br><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/35.png" alt="翻译"></p>
+</blockquote>
+<h2 id="2-PyCharm-汉化"><a href="#2-PyCharm-汉化" class="headerlink" title="2. PyCharm 汉化"></a>2. PyCharm 汉化</h2><p>右下角会有提示， 允许即可<br><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/36.png" alt="汉化"></p>
+<h2 id="3-Python-环境配置"><a href="#3-Python-环境配置" class="headerlink" title="3. Python 环境配置"></a>3. Python 环境配置</h2><ol>
+<li>状态提示：右下角会提示：<strong>无解释器</strong><br><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/37.png" alt="解释器"></li>
+<li>进入设置界面<br><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/38.png" alt="菜单"><br><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/39.png" alt="点击设置"></li>
+<li>选择 <strong>添加本地解释器</strong><br><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/40.png" alt="添加解释器"></li>
+<li>按照如图所示：<strong>选择现有 &gt; Python &gt; 选择路径</strong><br><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/41.png" alt="添加 Python"><br>若已经成功检测则可以跳过该步骤，否则：添加 <strong>Anaconda</strong> 路径下的 <strong>python.exe</strong><br><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/42.png" alt="路径"><br>按照如图所示依次确定<br><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/43.png" alt="确定"></li>
+</ol>
+<h2 id="4-Python-运行测试"><a href="#4-Python-运行测试" class="headerlink" title="4. Python 运行测试"></a>4. Python 运行测试</h2><p>接下来就可以运行经典的 <code>Hello World！</code>来检测是否安装成功。</p>
+<blockquote>
+<p>右键运行</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Hello World！&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/44.png" alt="Hello World！"></p>
+<h1 id="五-结语"><a href="#五-结语" class="headerlink" title="五. 结语"></a>五. 结语</h1><blockquote>
+<p>至此，PyCharm 和 Python 就已经全部安装成功！谢谢观看<br>联系方式：<strong>Yun200804</strong> 请备注：CSDN</p>
+</blockquote>
+<script src="https://giscus.app/client.js"
+        data-repo="hjy2008/hjy2008.github.io"
+        data-repo-id="R_kgDON52vOw"
+        data-category="Announcements"
+        data-category-id="DIC_kwDON52vO84Cm_Rc"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light_protanopia"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</article><div class="post-copyright"><div class="post-copyright__author_group"><div class="post-copyright__author_img"><img class="post-copyright__author_img_front" src="/img/logo.png"></div><div class="post-copyright__author_name">hanjingyun</div><div class="post-copyright__author_desc"></div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div></div></div><div class="social-share"><a class="social-share-ico icon-qq" target="_blank" rel="noopener" href="https://connect.qq.com/widget/shareqq/index.html?url=http%3A%2F%2Fhjy2008.github.io%2Fp%2F71977f9c.html&amp;title=PyCharm%20%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E%20Anaconda%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE&amp;desc=undefined&amp;summary=undefined&amp;site=PyCharm%20%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E%20Anaconda%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE&amp;pics=images%2FPyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%2Flogo.png" title="分享到QQ"><i class="solitude fab fa-qq"></i></a><div class="social-share-ico icon-qrcode" title="使用手机扫码阅读这篇文章"><i class="solitude fas fa-qrcode"></i><div class="share-main"><div class="share-main-all"><div id="qrcode"></div><div class="reward-dec">使用手机扫码阅读这篇文章</div></div></div><script pjax>typeof QRCode === 'function' && new QRCode(document.getElementById("qrcode"), {
+    text: 'http://hjy2008.github.io/p/71977f9c.html',
+    correctLevel : QRCode.CorrectLevel.L
+});
+window.addEventListener('DOMContentLoaded', () => {
+    new QRCode(document.getElementById("qrcode"), {
+        text: 'http://hjy2008.github.io/p/71977f9c.html',
+        correctLevel : QRCode.CorrectLevel.L
+    });
+});
+</script></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本文是原创文章，采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans">CC BY-NC-SA 4.0</a>协议，完整转载请注明来自<a href="/">爱编程的小伙子</a></span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%B7%A5%E5%85%B7/"><span class="tags-punctuation"><i class="solitude fas fa-hashtag"></i>工具<span class="tagsPageCount">2</span></span></a><a class="post-meta__tags" href="/tags/PyCharm/"><span class="tags-punctuation"><i class="solitude fas fa-hashtag"></i>PyCharm<span class="tagsPageCount">1</span></span></a><a class="post-meta__tags" href="/tags/%E6%BF%80%E6%B4%BB/"><span class="tags-punctuation"><i class="solitude fas fa-hashtag"></i>激活<span class="tagsPageCount">2</span></span></a><a class="post-meta__tags" href="/tags/%E7%A0%B4%E8%A7%A3/"><span class="tags-punctuation"><i class="solitude fas fa-hashtag"></i>破解<span class="tagsPageCount">2</span></span></a><a class="post-meta__tags" href="/tags/%E5%B7%B2%E6%88%90%E5%8A%9F/"><span class="tags-punctuation"><i class="solitude fas fa-hashtag"></i>已成功<span class="tagsPageCount">2</span></span></a><a class="post-meta__tags" href="/tags/%E4%B8%80%E6%AD%A5%E4%B8%80%E5%9B%BE/"><span class="tags-punctuation"><i class="solitude fas fa-hashtag"></i>一步一图<span class="tagsPageCount">2</span></span></a></div></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/p/c52cec0a.html"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Typora 2025 破解安装</div></div></a></div><div class="next-post pull-right"><a href="/p/4a17b156.html"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Hello World</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="top-group"><div class="sayhi" id="sayhi" onclick="sco.changeWittyWord()"></div></div></div><div class="avatar"><img alt="头像" src="/img/logo.jpg"></div><div class="description">一个热爱生活、爱编程的小伙子</div><div class="bottom-group"><span class="left"><div class="name">hanjingyun</div><div class="desc">欢迎来到我的博客 ~</div></span><div class="social-icons is-center"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="solitude fas fa-bars"></i><span>文章目录</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD"><span class="toc-text">一. 软件下载</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C-%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="toc-text">二. 软件安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-PyCharm-%E5%AE%89%E8%A3%85"><span class="toc-text">1. PyCharm 安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Anaconda-%E5%AE%89%E8%A3%85"><span class="toc-text">2. Anaconda 安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-%E8%BF%99%E9%87%8C%E6%98%AF%E9%87%8D%E7%82%B9%EF%BC%81%EF%BC%81Python-%E8%83%BD%E4%B8%8D%E8%83%BD%E6%AD%A3%E5%B8%B8%E7%94%A8%E5%8F%96%E5%86%B3%E4%BA%8E%E8%BF%99%E9%87%8C"><span class="toc-text">3. Anaconda 环境配置 [这里是重点！！Python 能不能正常用取决于这里]</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%89%BE%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-text">1. 找到环境变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%B7%BB%E5%8A%A0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-text">2. 添加环境变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%A0%A1%E9%AA%8C%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F"><span class="toc-text">3. 校验是否成功</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%8B%93%E5%B1%95%E4%BC%98%E5%8C%96"><span class="toc-text">4. 拓展优化</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89-PyCharm-%E6%BF%80%E6%B4%BB"><span class="toc-text">三. PyCharm 激活</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%B8%8B%E8%BD%BD%E6%BF%80%E6%B4%BB%E5%8C%85"><span class="toc-text">1. 下载激活包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%BF%80%E6%B4%BB"><span class="toc-text">2. 激活</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%BF%80%E6%B4%BB%E6%88%90%E5%8A%9F"><span class="toc-text">3. 激活成功</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B-PyCharm-%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE"><span class="toc-text">四. PyCharm 相关配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%8F%AF%E4%BB%A5%E9%80%89%E6%8B%A9-%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AE-%E6%88%96-%E6%89%93%E5%BC%80%E5%B7%B2%E6%9C%89%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-text">1. 可以选择 新建项目 或 打开已有项目文件夹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-PyCharm-%E6%B1%89%E5%8C%96"><span class="toc-text">2. PyCharm 汉化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Python-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="toc-text">3. Python 环境配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Python-%E8%BF%90%E8%A1%8C%E6%B5%8B%E8%AF%95"><span class="toc-text">4. Python 运行测试</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%94-%E7%BB%93%E8%AF%AD"><span class="toc-text">五. 结语</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="solitude fas fa-map"></i><span>最近发布</span></div><div class="aside-list"><a class="aside-list-item" href="/p/c52cec0a.html" title="Typora 2025 破解安装"><div class="thumbnail"><img alt="Typora 2025 破解安装" src="/images/Typora-2025-%E7%A0%B4%E8%A7%A3%E5%AE%89%E8%A3%85/header.png"></div><div class="content"><span class="title" href="/p/c52cec0a.html" title="Typora 2025 破解安装">Typora 2025 破解安装</span><span class="categories" href="/p/c52cec0a.html">工具</span></div></a><a class="aside-list-item" href="/p/71977f9c.html" title="PyCharm 安装、激活破解与 Anaconda 环境配置"><div class="thumbnail"><img alt="PyCharm 安装、激活破解与 Anaconda 环境配置" src="/images/PyCharm-%E5%AE%89%E8%A3%85%E3%80%81%E6%BF%80%E6%B4%BB%E7%A0%B4%E8%A7%A3%E4%B8%8E-Anaconda-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/logo.png"></div><div class="content"><span class="title" href="/p/71977f9c.html" title="PyCharm 安装、激活破解与 Anaconda 环境配置">PyCharm 安装、激活破解与 Anaconda 环境配置</span><span class="categories" href="/p/71977f9c.html">工具</span></div></a><a class="aside-list-item" href="/p/4a17b156.html" title="Hello World"><div class="thumbnail"><img alt="Hello World" src="/images/Hello-World/logo.jpg"></div><div class="content"><span class="title" href="/p/4a17b156.html" title="Hello World">Hello World</span></div></a></div></div></div></div></main><footer id="footer"><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2023 - 2025 By&nbsp;<a class="footer-bar-link" href="/"><img class="author-avatar" src="/img/pwa/favicon.png">hanjingyun</a></div><div class="beian-group"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://hexo.io/">框架：Hexo</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude">主题：Solitude</a></div></div></div></div></footer></div><!-- right_menu--><!-- inject body--><div><script src="/js/utils.js?v=3.0.11"></script><script src="/js/main.js?v=3.0.11"></script><script src="/js/third_party/waterfall.min.js?v=3.0.11"></script><script src="https://fastly.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="https://fastly.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script><script src="https://fastly.jsdelivr.net/npm/typeit@8.8.7/dist/index.umd.min.js"></script><script src="/js/third_party/universe.min.js?v=3.0.11"></script><script>dark()
+</script><script src="/js/tw_cn.js?v=3.0.11"></script><script src="https://fastly.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script src="https://fastly.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js"></script><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+utils.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+</script><script src="https://fastly.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><div class="js-pjax"></div></div><!-- pjax--><script>const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: ["title","#body-wrap","#site-config","meta[name=\"description\"]",".js-pjax","meta[property^=\"og:\"]","#config-diff",".rs_show",".rs_hide"],
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+})
+
+document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+})
+
+document.addEventListener('pjax:complete', () => {
+    window.refreshFn()
+
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+        const newScript = document.createElement('script')
+        const content = item.text || item.textContent || item.innerHTML || ""
+        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+        newScript.appendChild(document.createTextNode(content))
+        item.parentNode.replaceChild(newScript, item)
+    })
+
+    GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+        pjax.loadUrl('/404.html')
+    }
+})</script><!-- google adsense--><!-- search--><!-- music--></body></html>
+        <script>
+            const posts = ["p/c52cec0a.html","p/71977f9c.html","p/4a17b156.html"];
+            function toRandomPost() {
+                const randomPost = posts[Math.floor(Math.random() * posts.length)];
+                pjax.loadUrl(GLOBAL_CONFIG.root + randomPost);
+            }
+        </script>
