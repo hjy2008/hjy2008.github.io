@@ -2081,6 +2081,21 @@ span.tags-punctuation i {
   font-size: 14px;
   line-height: 32px;
 }
+#global_bg {
+  position: fixed;
+  z-index: 999;
+  opacity: 0.08;
+  width: 100%;
+  height: 100%;
+  background-image: url("http://tool.liumingye.cn/bingimg/img.php");
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
+  background-repeat: no-repeat;
+}
+[data-theme=dark] #global_bg {
+  background-image: url("http://tool.liumingye.cn/bingimg/img.php");
+}
 .article-container {
   overflow-wrap: break-word;
 }
