@@ -2087,14 +2087,14 @@ span.tags-punctuation i {
   opacity: 0.08;
   width: 100%;
   height: 100%;
-  background-image: url("http://tool.liumingye.cn/bingimg/img.php");
+  background-image: url("https://img.picgo.net/2025/02/19/bga917568c7e69a6bd.webp");
   background-size: cover;
   background-position: center;
   pointer-events: none;
   background-repeat: no-repeat;
 }
 [data-theme=dark] #global_bg {
-  background-image: url("http://tool.liumingye.cn/bingimg/img.php");
+  background-image: url("https://img.picgo.net/2025/02/19/bgN9db432f62a3669a0.jpg");
 }
 .article-container {
   overflow-wrap: break-word;
