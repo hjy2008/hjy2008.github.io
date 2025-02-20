@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://hjy2008.github.io/p/a76675d3.html</loc>
+    <loc>http://hjy2008.github.io/p/71ab439f.html</loc>
     
     <lastmod>2025-02-20</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://hjy2008.github.io/p/71ab439f.html</loc>
+    <loc>http://hjy2008.github.io/p/a76675d3.html</loc>
     
     <lastmod>2025-02-20</lastmod>
     
@@ -126,34 +126,6 @@
   </url>
   
   <url>
-    <loc>http://hjy2008.github.io/tags/Ai/</loc>
-    <lastmod>2025-02-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://hjy2008.github.io/tags/Ollama/</loc>
-    <lastmod>2025-02-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://hjy2008.github.io/tags/%E5%B7%B2%E6%88%90%E5%8A%9F/</loc>
-    <lastmod>2025-02-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://hjy2008.github.io/tags/%E4%B8%80%E6%AD%A5%E4%B8%80%E5%9B%BE/</loc>
-    <lastmod>2025-02-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://hjy2008.github.io/tags/BurpSuite-Pro/</loc>
     <lastmod>2025-02-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -175,7 +147,35 @@
   </url>
   
   <url>
+    <loc>http://hjy2008.github.io/tags/%E5%B7%B2%E6%88%90%E5%8A%9F/</loc>
+    <lastmod>2025-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://hjy2008.github.io/tags/%E4%B8%80%E6%AD%A5%E4%B8%80%E5%9B%BE/</loc>
+    <lastmod>2025-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://hjy2008.github.io/tags/Ai/</loc>
+    <lastmod>2025-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://hjy2008.github.io/tags/Office/</loc>
+    <lastmod>2025-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://hjy2008.github.io/tags/Ollama/</loc>
     <lastmod>2025-02-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -205,14 +205,14 @@
 
   
   <url>
-    <loc>http://hjy2008.github.io/categories/Ai/</loc>
+    <loc>http://hjy2008.github.io/categories/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2025-02-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://hjy2008.github.io/categories/%E5%B7%A5%E5%85%B7/</loc>
+    <loc>http://hjy2008.github.io/categories/Ai/</loc>
     <lastmod>2025-02-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
