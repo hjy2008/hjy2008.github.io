@@ -1,3 +1,4 @@
+http://hjy2008.github.io/p/87748b55.html
 http://hjy2008.github.io/p/fed7e2e0.html
 http://hjy2008.github.io/p/4534a9ac.html
 http://hjy2008.github.io/p/9c4f8e78.html
@@ -25,13 +26,15 @@ http://hjy2008.github.io/tags/Ollama/
 http://hjy2008.github.io/tags/PyCharm/
 http://hjy2008.github.io/tags/Python/
 http://hjy2008.github.io/tags/Typora/
-http://hjy2008.github.io/tags/Office/
 http://hjy2008.github.io/tags/Python-%E6%BA%90%E4%BB%A3%E7%A0%81/
 http://hjy2008.github.io/tags/%E7%88%AC%E8%99%AB/
+http://hjy2008.github.io/tags/%E8%B5%A4%E5%B3%B0%E4%BA%8C%E4%B8%AD/
+http://hjy2008.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/
 http://hjy2008.github.io/tags/Api/
 http://hjy2008.github.io/tags/%E5%AE%9E%E6%97%B6%E6%9B%B4%E6%96%B0/
+http://hjy2008.github.io/tags/Office/
 http://hjy2008.github.io/categories/%E7%BC%96%E7%A8%8B%E8%BD%AF%E4%BB%B6/
 http://hjy2008.github.io/categories/Ai/
-http://hjy2008.github.io/categories/%E5%B7%A5%E5%85%B7/
 http://hjy2008.github.io/categories/%E6%BA%90%E4%BB%A3%E7%A0%81/
 http://hjy2008.github.io/categories/Api/
+http://hjy2008.github.io/categories/%E5%B7%A5%E5%85%B7/
